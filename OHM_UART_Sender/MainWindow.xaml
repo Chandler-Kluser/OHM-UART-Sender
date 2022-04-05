@@ -1,0 +1,29 @@
+﻿<Window x:Class="OHM_UART_Sender.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OHM_UART_Sender"
+        mc:Ignorable="d"
+        ResizeMode="CanMinimize"
+        Title="OHM UART Sender" Height="240" Width="300">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="Label1" Content="COM Port:" HorizontalContentAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Center" FontSize="16"/>
+        <Label x:Name="Label2" Content="Baud Rate:" HorizontalContentAlignment="Stretch" Grid.Row="1" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Center" FontSize="16"/>
+        <Label x:Name="Label3" Content="Refresh Time [ms]:" HorizontalContentAlignment="Stretch" Grid.Row="2" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Center" FontSize="16"/>
+        <TextBox x:Name="TextBox_COM_Port" Grid.Column="1" Text="COM7" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="5,2,5,2" TextWrapping="Wrap" VerticalContentAlignment="Center" VerticalAlignment="Stretch" FontSize="16"/>
+        <TextBox x:Name="TextBox_BAUD_RATE" Grid.Row="1" Text="115200" Grid.Column="1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="5,2,5,2" TextWrapping="Wrap" VerticalContentAlignment="Center" VerticalAlignment="Stretch" FontSize="16"/>
+        <TextBox x:Name="TextBox_REFRESH_TIME" Text="1500" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Margin="5,2,5,2" TextWrapping="Wrap" VerticalContentAlignment="Center" VerticalAlignment="Stretch" FontSize="16"/>
+        <Button x:Name="Button_Start_Stop" Grid.Row="3" Grid.ColumnSpan="2" Content="{Binding ButtonContent}" Click="Button_Start_Stop_Click" HorizontalAlignment="Stretch" Margin="5,5,5,10" VerticalAlignment="Stretch" FontSize="24"/>
+    </Grid>
+</Window>
